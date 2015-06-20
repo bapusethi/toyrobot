@@ -1,5 +1,5 @@
 module Robot
-  class Table
+  class Table    
      
      def initialize max_x , max_y
         @MAX_X = max_x
