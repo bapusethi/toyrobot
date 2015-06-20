@@ -10,9 +10,9 @@ module Robot
     
     def to_s
       if @placed 
-       "Placed at #{@position.to_s}"
+        "Placed at #{@position.to_s}"
       else  
-      "Not placed"
+        "Not placed"
       end
     end
     

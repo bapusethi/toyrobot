@@ -36,7 +36,7 @@ describe Simulator do
       
   end
   
-  describe "# turns" do
+  describe "#turns" do
   
     context "when faced north" do
       before {

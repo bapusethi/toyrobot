@@ -43,7 +43,7 @@ describe CommandParser do
     end
     
     
-  context "without range" do   
+  context "#without range" do   
      
      context "with string" do  
        before {
