@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-$:.push File.expand_path(File.dirname(__FILE__) + '/../lib')
+$LOAD_PATH.push File.expand_path(File.dirname(__FILE__) + '/../lib')
 
-require 'robot'
+require 'toyrobot'
 
-robot_cli = Robot::CLI.new
+robot_cli = ToyRobot::CLI.new
 robot_cli.start
