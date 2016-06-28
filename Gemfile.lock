@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    robot (0.0.2)
+    toyrobot (0.0.2)
 
 GEM
   remote: http://rubygems.org/
@@ -49,7 +49,10 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.7)
   rake (~> 10.0)
-  robot!
   rspec
   rubocop
   simplecov
+  toyrobot!
+
+BUNDLED WITH
+   1.11.2

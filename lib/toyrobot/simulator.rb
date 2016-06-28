@@ -6,10 +6,10 @@ module ToyRobot
 
     def initialize(max_x, max_y)
       commands = {
-        PLACE: [[:number, :number, :string],
-                [nil, nil, '^NORTH$|^SOUTH$|^EAST$|^WEST$']],
-        MOVE: [[], []], LEFT: [[], []],
-        RIGHT: [[], []], REPORT: [[], []]
+        'PLACE' => [[:number, :number, :string],
+                    [nil, nil, '^NORTH$|^SOUTH$|^EAST$|^WEST$']],
+        'MOVE' => [[], []], 'LEFT' => [[], []],
+        'RIGHT' => [[], []], 'REPORT' => [[], []]
       }
       @command_parser = CommandParser.new(commands)
       @table          = Table.new max_x, max_y
@@ -18,11 +18,10 @@ module ToyRobot
     end
 
     def execute(input)
+      return if input.strip! && input.empty?
       @command_parser.parse(input) do |command, args|
-        logger.debug("#{command.downcase} - args #{args}")
         send(command.downcase, * args) if valid?(command)
       end
-      logger.debug(@toy_robot.to_s)
     end
 
     def place(x, y, face)
@@ -59,11 +58,11 @@ module ToyRobot
     private
 
     def ignore
-      logger.debug "Ignored step towards #{toy_robot.position.direction}"
+      logger.info "Ignored step towards #{toy_robot.position.direction}"
     end
 
     def valid?(command)
-      @toy_robot.placed || (command.casecmp(:place) == 0)
+      @toy_robot.placed || (command.casecmp('place') == 0)
     end
   end
 end
