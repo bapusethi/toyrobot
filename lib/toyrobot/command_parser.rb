@@ -10,8 +10,9 @@ module ToyRobot
     end
 
     def parse(command)
-      args = command.split ' '
-      method = args.delete_at(0).to_sym
+      method = command.split(' ')[0]
+      args = get_argument command, method
+
       if valid?(method, args)
         update_args! method, args
         yield method, args
@@ -52,6 +53,11 @@ module ToyRobot
       when :string
         (arg =~ /#{allowed_reg}/) == 0
       end
+    end
+
+    def get_argument(command, method)
+      argument = command.gsub(method, '').delete(' ')
+      argument.empty? ? [] : argument.split(',')
     end
   end
 end

@@ -10,7 +10,6 @@ module ToyRobot
     def start
       command = read_command
       while command
-        logger.debug("Received command #{command}")
         begin
           @simulator.execute command
         rescue => e

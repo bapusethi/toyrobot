@@ -4,8 +4,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'toyrobot/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'robot'
-  spec.version       = Robot::VERSION
+  spec.name          = 'toyrobot'
+  spec.version       = ToyRobot::VERSION
   spec.authors       = ['bapu']
   spec.email         = ['bapu.sethi.03@gmail.com']
   spec.summary       = 'Toy robot simulator'
@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = ''
   spec.license       = 'MIT'
 
-  spec.files         = `git ls-files -z`.split('\x0')
+  spec.files         = Dir.glob('**/*')
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']

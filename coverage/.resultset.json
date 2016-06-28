@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "c:/Sites/toy/toy/toyrobot/toyrobot/spec/toyrobot/direction_spec.rb": [
+      "c:/Sites/robot/toyrobot/spec/toyrobot/direction_spec.rb": [
         1,
         1,
         null,
@@ -28,7 +28,7 @@
         null,
         null
       ],
-      "c:/Sites/toy/toy/toyrobot/toyrobot/spec/toyrobot/postions_spec.rb": [
+      "c:/Sites/robot/toyrobot/spec/toyrobot/postions_spec.rb": [
         1,
         1,
         null,
@@ -100,7 +100,7 @@
         null,
         null
       ],
-      "c:/Sites/toy/toy/toyrobot/toyrobot/spec/toyrobot/simulator_spec.rb": [
+      "c:/Sites/robot/toyrobot/spec/toyrobot/simulator_spec.rb": [
         1,
         1,
         null,
@@ -198,7 +198,7 @@
         null,
         null
       ],
-      "c:/Sites/toy/toy/toyrobot/toyrobot/spec/toyrobot/table_spec.rb": [
+      "c:/Sites/robot/toyrobot/spec/toyrobot/table_spec.rb": [
         1,
         1,
         null,
@@ -218,6 +218,6 @@
         null
       ]
     },
-    "timestamp": 1457271731
+    "timestamp": 1467121419
   }
 }

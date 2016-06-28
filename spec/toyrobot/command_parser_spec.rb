@@ -5,10 +5,10 @@ include ToyRobot
 describe CommandParser do
   subject(:command_parser) do
     CommandParser.new(
-      Greet: [[:string],
-              ['^Hello$|^Hi$']],
-      Name: [[:string], []],
-      Age: [[:number], []]
+      'Greet' => [[:string],
+                  ['^Hello$|^Hi$']],
+      'Name' => [[:string], []],
+      'Age' => [[:number], []]
     )
   end
 
@@ -26,7 +26,7 @@ describe CommandParser do
       it { expect(@called).to be true }
       it { expect(@a.size).to be 1    }
       it { expect(@a[0]).to  match 'Hello' }
-      it { expect(@m).to     match :Greet }
+      it { expect(@m).to     match 'Greet' }
     end
 
     context '#without range' do
@@ -44,7 +44,7 @@ describe CommandParser do
         it { expect(@called).to be true }
         it { expect(@a.size).to be 1    }
         it { expect(@a[0]).to  match 'Tom' }
-        it { expect(@m).to     match :Name }
+        it { expect(@m).to     match 'Name' }
       end
 
       context 'with number' do
@@ -60,7 +60,7 @@ describe CommandParser do
         it { expect(@called).to be true }
         it { expect(@a.size).to be 1    }
         it { expect(@a[0]).to   be 50   }
-        it { expect(@m).to match :Age }
+        it { expect(@m).to match 'Age' }
       end
     end
   end
